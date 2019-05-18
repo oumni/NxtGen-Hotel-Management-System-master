@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane fx:id="mainloginpane" prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: #d21a1a;">
+         <children>
+            <Label layoutX="50.0" layoutY="61.0" text="Connectez-vous maintenant!" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userfield" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="151.0" prefHeight="26.0" prefWidth="349.0" promptText="Login" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ffffff;" unFocusColor="#ebebeb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passfield" focusColor="WHITE" labelFloat="true" layoutX="26.0" layoutY="221.0" prefHeight="26.0" prefWidth="349.0" promptText="Mot de passe" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="#ebebeb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginbtn" layoutX="126.0" layoutY="330.0" onAction="#login" style="-fx-background-color: #FF5722; -fx-background-radius: 5;" text="Se Connecter" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="forgotpassword" layoutX="261.0" layoutY="281.0" text="Mot de passe oublié?" textFill="#ebebeb">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="errorlabel" layoutX="87.0" layoutY="390.0" text="Erreur! Login ou mot de passe incorrecte" textFill="WHITE" />
+            <JFXProgressBar fx:id="progressbar" layoutX="75.0" layoutY="430.0" prefHeight="3.0" prefWidth="256.0" visible="false" />
+            <HBox layoutX="330.0" prefHeight="35.0" prefWidth="70.0">
+               <children>
+                  <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="forgotpassword1" disable="true" layoutX="25.0" layoutY="281.0" text="Créez un compte?" textFill="#ebebeb">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <JFXButton fx:id="registerbtn" layoutX="123.0" layoutY="277.0" onAction="#RegisterPopUp" text="S'inscrire" underline="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

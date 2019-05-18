@@ -1,0 +1,21 @@
+#pane
+{
+ -fx-background-image: url("back.jpg");
+-fx-background-repeat:repeat;
+}
+
+#AnchorPane
+{
+	-fx-background-color:#ffff;
+	-fx-background-repeat:no-repeat;
+	-fx-background-size: cover;
+}
+
+#box1
+{
+ 	-fx-background-image: url("bungalow.jpg");
+	-fx-background-repeat:no-repeat;
+	-fx-background-size: cover;
+	-fx-border-radius: 6;
+
+}

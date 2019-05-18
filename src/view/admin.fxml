@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane fx:id="mainhomepane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@/controller/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+   <children>
+      <AnchorPane fx:id="leftpane" prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: #4b3c3c;">
+         <children>
+            <JFXButton fx:id="addbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="180.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Add" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="moviescreensbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="230.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Movie Screens" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="logoutbtn" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="315.0" onAction="#logOut" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="POWER" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="55.0" layoutY="29.0" text="MUV for Staff" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Line endX="230.0" fill="WHITE" layoutX="10.0" layoutY="60.0" opacity="0.85" stroke="WHITE" strokeLineCap="ROUND" />
+            <Label fx:id="userlabel" graphicTextGap="10.0" layoutX="20.0" layoutY="600.0" text="Logged in as: Najm Dost" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" size="20" />
+               </graphic>
+            </Label>
+            <JFXButton fx:id="moviescreensbtn1" alignment="TOP_LEFT" graphicTextGap="20.0" layoutX="10.0" layoutY="274.0" onAction="#loadScene" onMouseEntered="#btnHover" onMouseExited="#btnExit" opacity="0.8" prefHeight="40.0" prefWidth="230.0" text="Sign" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" size="20" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="700.0" prefWidth="950.0">
+         <children>
+            <AnchorPane fx:id="toppane" prefHeight="35.0" prefWidth="950.0" style="-fx-background-color: #d21a1a;">
+               <children>
+                  <Label layoutX="362.0" layoutY="8.0" text="Console d'administration " textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="HOME" size="20" />
+                     </graphic>
+                  </Label>
+                  <HBox layoutX="880.0" prefHeight="35.0">
+                     <children>
+                        <JFXButton fx:id="minimisebtn" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimiseWindow" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="MINUS" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="closebtn" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleClose" prefHeight="35.0" prefWidth="35.0" ripplerFill="WHITE">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="CLOSE" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="20.0" layoutY="200.0" prefHeight="480.0" prefWidth="910.0" styleClass="tiles">
+               <children>
+                  <JFXTabPane fx:id="tabpane" prefHeight="480.0" prefWidth="910.0" rotateGraphic="true">
+                     <tabs>
+                        <Tab styleClass="tabs" text="Gestion des utilisateurs">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane fx:id="s3tile1" layoutX="71.0" layoutY="320.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#rotatePane" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #ff0058;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="15.0" text="Available Seats" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="s3availableseats" layoutX="15.0" layoutY="35.0" text="5" textFill="WHITE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="s3tile4" layoutX="281.0" layoutY="320.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#rotatePane" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #f3b906;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="15.0" text="Time Remaining" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="s3timeremaining" layoutX="15.0" layoutY="35.0" text="1:06:37" textFill="WHITE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="s3tile2" layoutX="714.0" layoutY="68.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#rotatePane" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #f22b1d;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="15.0" text="Repeats Left" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="s3repeatsleft" layoutX="15.0" layoutY="35.0" text="6" textFill="WHITE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="s3tile5" layoutX="490.0" layoutY="320.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#rotatePane" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #02b3ce;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Time Slot (12 hrs)" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="s3timeslot" layoutX="15.0" layoutY="35.0" text="14--15" textFill="WHITE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="s3tile3" layoutX="714.0" layoutY="200.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#rotatePane" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #68AE00;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="15.0" text="IMDB Rating" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="s3rating" layoutX="15.0" layoutY="35.0" text="8.2" textFill="WHITE">
+                                             <font>
+                                                <Font size="30.0" />
+                                             </font>
+                                             <graphic>
+                                                <Rating max="1" prefHeight="35.0" prefWidth="250.0" rating="1.0" />
+                                             </graphic>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="s3tile6" layoutX="714.0" layoutY="320.0" onMouseEntered="#tileHover" onMouseExited="#tileExit" onMouseReleased="#viewMovieScreens" prefHeight="100.0" prefWidth="170.0" style="-fx-background-color: #ff9202;" styleClass="tiles">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="15.0" text="View Movie Screens" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <MaterialDesignIconView fill="WHITE" glyphName="MOVIE" layoutX="15.0" layoutY="72.0" size="35" />
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </AnchorPane>
+                                    <TableView fx:id="tableView" layoutX="71.0" layoutY="68.0" prefHeight="209.0" prefWidth="589.0">
+                                      <columns>
+                                        <TableColumn fx:id="col_id" prefWidth="35.0" text="Id" />
+                                        <TableColumn fx:id="col_login" prefWidth="90.0" text="login" />
+                                          <TableColumn fx:id="col_prenom" prefWidth="92.0" text="Prénom" />
+                                          <TableColumn fx:id="col_nom" prefWidth="83.0" text="Nom" />
+                                          <TableColumn fx:id="col_email" prefWidth="162.0" text="E-mail" />
+                                          <TableColumn fx:id="col_date" prefWidth="125.0" text="date de naissance" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" height="1.0" radius="0.0" width="0.5" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="p1" layoutX="20.0" layoutY="60.0" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: #e8165e;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="99.0" prefWidth="80.0" style="-fx-background-color: #bf124d;" styleClass="tiles">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILM" layoutX="16.0" layoutY="65.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="p1shadow" layoutX="80.0" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #d71557;" />
+                  <Label layoutX="100.0" layoutY="20.0" text="Tickets Sold Today" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="39.0" text="579" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="p2" layoutX="335.0" layoutY="61.0" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: #01bfdb;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="99.0" prefWidth="80.0" style="-fx-background-color: #008fa4;" styleClass="tiles">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" layoutX="16.0" layoutY="65.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="p2shadow" layoutX="80.0" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #00abc5;" />
+                  <Label layoutX="100.0" layoutY="20.0" text="Total Sale Today" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="100.0" layoutY="39.0" text="£5790" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="p3" layoutX="650.0" layoutY="60.0" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: #EE712B;" styleClass="tiles">
+               <children>
+                  <AnchorPane prefHeight="99.0" prefWidth="80.0" style="-fx-background-color: #DC4712;" styleClass="tiles">
+                     <children>
+                        <MaterialDesignIconView fill="WHITE" glyphName="CALENDAR_CLOCK" layoutX="16.0" layoutY="65.0" size="40" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="p3shadow" layoutX="80.0" prefHeight="100.0" prefWidth="1.0" style="-fx-background-color: #ea6012;" />
+                  <Label fx:id="datelabel" layoutX="100.0" layoutY="10.0" text="13/02/2018" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timelabel" layoutX="100.0" layoutY="50.0" text="23:37:41" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
